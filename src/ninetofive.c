@@ -59,12 +59,12 @@ void calculate_percent_complete(PblTm atime) {
   {
     percent_fill = 0.0;
   }
-  else if (atime.tm_hour >= 8 && atime.tm_hour < 17)
+  else if (atime.tm_hour >= 8 && atime.tm_hour < 13)
   {
     percent_fill = (atime.tm_hour - 8.0) / 9.0;
     percent_fill += (atime.tm_min / 60.0) * (1.0/9.0);
   }
-  else if (atime.tm_hour >= 17)
+  else if (atime.tm_hour >= 13)
   {
     percent_fill = 1.0;
   }
